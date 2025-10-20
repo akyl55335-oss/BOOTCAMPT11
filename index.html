@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT-Hub: Профессиональное Обучение Программированию</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet]">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">IT-Hub</div>
+        <nav>
+            <a href="#courses">Курсы</a>
+            <a href="#advantages">Преимущества</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#" class="btn-primary">Начать бесплатно</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Освойте IT-профессию будущего уже сегодня.</h1>
+                <p class="subtitle">Практические курсы от ведущих экспертов индустрии. Начните кодить с первого урока!</p>
+                <a href="#courses" class="btn-primary btn-large">Посмотреть курсы</a>
+                <a href="#" class="btn-secondary">Бесплатный вводный урок</a>
+            </div>
+        </section>
+
+        <section id="courses" class="section courses-grid">
+            <h2>Популярные направления</h2>
+            <div class="course-card">
+                <div class="icon">💻</div>
+                <h3>Frontend-разработчик</h3>
+                <p>HTML, CSS, JavaScript, React. Создание адаптивных интерфейсов.</p>
+                <a href="#" class="btn-link">Подробнее →</a>
+            </div>
+            <div class="course-card">
+                <div class="icon">🐍</div>
+                <h3>Python для Data Science</h3>
+                <p>Основы Python, анализ данных, машинное обучение и библиотеки.</p>
+                <a href="#" class="btn-link">Подробнее →</a>
+            </div>
+            <div class="course-card">
+                <div class="icon">⚙️</div>
+                <h3>DevOps-инженер</h3>
+                <p>Docker, Kubernetes, CI/CD. Автоматизация процессов разработки.</p>
+                <a href="#" class="btn-link">Подробнее →</a>
+            </div>
+        </section>
+
+        <section id="advantages" class="section bg-light">
+            <h2>Почему выбирают IT-Hub?</h2>
+            <div class="advantage-list">
+                <div class="advantage-item">
+                    <h3>100% Практика</h3>
+                    <p>Только реальные проекты и живые код-ревью от менторов.</p>
+                </div>
+                <div class="advantage-item">
+                    <h3>Поддержка 24/7</h3>
+                    <p>Эксперты всегда готовы ответить на ваши вопросы в чате.</p>
+                </div>
+                <div class="advantage-item">
+                    <h3>Помощь с трудоустройством</h3>
+                    <p>Подготовка резюме, портфолио и симуляция собеседований.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="section">
+            <h2>Что говорят наши студенты</h2>
+            <div class="review-card">
+                <p class="review-text">"За 6 месяцев я сменил работу и утроил свой доход! Материал подается очень доступно, а практические задания максимально приближены к реальной работе."</p>
+                <p class="review-author">— Алексей П., Junior Frontend Developer</p>
+            </div>
+        </section>
+
+        <section class="cta-banner">
+            <h2>Готовы начать карьеру в IT?</h2>
+            <a href="#" class="btn-primary btn-large">Записаться на курс</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>IT-Hub &copy; 2025</p>
+            <div class="social-links">
+                <a href="#">Telegram</a> | <a href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="index.js"></script>
+
+
+
+    <section id="game-quiz" class="section bg-light">
+    <h2>Проверь свои знания: IT-Викторина 🧠</h2>
+    <p class="subtitle">Угадайте термин по его определению. Отличный способ закрепить материал!</p>
+    
+    <div class="quiz-container">
+        <div id="quiz-question" class="question-box">Нажмите "Начать игру", чтобы увидеть первый вопрос.</div>
+        <div id="quiz-options" class="options-grid">
+            </div>
+        
+        <button id="start-game-btn" class="btn-primary btn-large">Начать игру</button>
+        <p id="quiz-feedback" class="feedback-text"></p>
+        <p id="quiz-score">Счет: 0</p>
+    </div>
+</section>
+</body>
+</html>
