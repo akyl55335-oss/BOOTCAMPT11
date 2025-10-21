@@ -1,113 +1,965 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT-Hub: Профессиональное Обучение Программированию</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet]">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="navbar">
-        <div class="logo">IT-Hub</div>
-        <nav>
-            <a href="#courses">Курсы</a>
-            <a href="#advantages">Преимущества</a>
-            <a href="#reviews">Отзывы</a>
-            <a href="#" class="btn-primary">Начать бесплатно</a>
-        </nav>
-    </header>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OkurmenKids - IT Образование для детей</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Освойте IT-профессию будущего уже сегодня.</h1>
-                <p class="subtitle">Практические курсы от ведущих экспертов индустрии. Начните кодить с первого урока!</p>
-                <a href="#courses" class="btn-primary btn-large">Посмотреть курсы</a>
-                <a href="#" class="btn-secondary">Бесплатный вводный урок</a>
-            </div>
-        </section>
+        * {
+            box-sizing: border-box;
+        }
 
-        <section id="courses" class="section courses-grid">
-            <h2>Популярные направления</h2>
-            <div class="course-card">
-                <div class="icon">💻</div>
-                <h3>Frontend-разработчик</h3>
-                <p>HTML, CSS, JavaScript, React. Создание адаптивных интерфейсов.</p>
-                <a href="#" class="btn-link">Подробнее →</a>
-            </div>
-            <div class="course-card">
-                <div class="icon">🐍</div>
-                <h3>Python для Data Science</h3>
-                <p>Основы Python, анализ данных, машинное обучение и библиотеки.</p>
-                <a href="#" class="btn-link">Подробнее →</a>
-            </div>
-            <div class="course-card">
-                <div class="icon">⚙️</div>
-                <h3>DevOps-инженер</h3>
-                <p>Docker, Kubernetes, CI/CD. Автоматизация процессов разработки.</p>
-                <a href="#" class="btn-link">Подробнее →</a>
-            </div>
-        </section>
+        /* Анимации */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-        <section id="advantages" class="section bg-light">
-            <h2>Почему выбирают IT-Hub?</h2>
-            <div class="advantage-list">
-                <div class="advantage-item">
-                    <h3>100% Практика</h3>
-                    <p>Только реальные проекты и живые код-ревью от менторов.</p>
-                </div>
-                <div class="advantage-item">
-                    <h3>Поддержка 24/7</h3>
-                    <p>Эксперты всегда готовы ответить на ваши вопросы в чате.</p>
-                </div>
-                <div class="advantage-item">
-                    <h3>Помощь с трудоустройством</h3>
-                    <p>Подготовка резюме, портфолио и симуляция собеседований.</p>
-                </div>
-            </div>
-        </section>
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-        <section id="reviews" class="section">
-            <h2>Что говорят наши студенты</h2>
-            <div class="review-card">
-                <p class="review-text">"За 6 месяцев я сменил работу и утроил свой доход! Материал подается очень доступно, а практические задания максимально приближены к реальной работе."</p>
-                <p class="review-author">— Алексей П., Junior Frontend Developer</p>
-            </div>
-        </section>
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-        <section class="cta-banner">
-            <h2>Готовы начать карьеру в IT?</h2>
-            <a href="#" class="btn-primary btn-large">Записаться на курс</a>
-        </section>
-    </main>
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
 
-    <footer>
-        <div class="footer-content">
-            <p>IT-Hub &copy; 2025</p>
-            <div class="social-links">
-                <a href="#">Telegram</a> | <a href="#">LinkedIn</a>
-            </div>
-        </div>
-    </footer>
-    
-    <script src="index.js"></script>
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
 
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
 
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out;
+        }
 
-    <section id="game-quiz" class="section bg-light">
-    <h2>Проверь свои знания: IT-Викторина 🧠</h2>
-    <p class="subtitle">Угадайте термин по его определению. Отличный способ закрепить материал!</p>
-    
-    <div class="quiz-container">
-        <div id="quiz-question" class="question-box">Нажмите "Начать игру", чтобы увидеть первый вопрос.</div>
-        <div id="quiz-options" class="options-grid">
-            </div>
-        
-        <button id="start-game-btn" class="btn-primary btn-large">Начать игру</button>
-        <p id="quiz-feedback" class="feedback-text"></p>
-        <p id="quiz-score">Счет: 0</p>
+        .animate-slideInLeft {
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .animate-slideInRight {
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .animate-bounce {
+            animation: bounce 2s infinite;
+        }
+
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Градиентные фоны */
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .gradient-bg-2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .gradient-bg-3 {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        /* Хедер */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Главная секция */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            color: #666;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Плавающие элементы */
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            font-size: 2rem;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 60%;
+            right: 15%;
+            animation: float 4s ease-in-out infinite reverse;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation: float 5s ease-in-out infinite;
+        }
+
+        /* Секции */
+        .section {
+            padding: 5rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        /* Курсы */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .course-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .course-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .course-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .course-features li {
+            padding: 0.5rem 0;
+            color: #555;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .course-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ade80;
+            font-weight: bold;
+        }
+
+        /* Преимущества */
+        .advantages {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            margin: 3rem 0;
+            border-radius: 20px;
+            padding: 3rem;
+        }
+
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .advantage-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .advantage-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .advantage-item h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        /* Статистика */
+        .stats {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin: 3rem 0;
+            border-radius: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Программа обучения */
+        .curriculum {
+            margin: 4rem 0;
+        }
+
+        .curriculum-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 3rem;
+            align-items: center;
+        }
+
+        .timeline-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 2rem;
+            flex-shrink: 0;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .timeline-content h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        /* Контакты */
+        .contact {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+        }
+
+        .contact h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 3rem;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            animation: fadeInUp 0.3s ease-out;
+        }
+
+        .close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #333;
+        }
+
+        .modal h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #333;
+        }
+
+        .contact-details {
+            text-align: center;
+            line-height: 2;
+        }
+
+        .contact-details p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+
+        .phone-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+            margin: 1.5rem 0;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .timeline-number {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <header class="header">
+   <nav class="nav">
+    <div class="logo" id="site-title">
+     OkurmenKids
     </div>
-</section>
-</body>
+    <ul class="nav-links">
+     <li><a href="#courses">Курсы</a></li>
+     <li><a href="#advantages">Преимущества</a></li>
+     <li><a href="#program">Программа</a></li>
+     <li><a href="#contact">Контакты</a></li>
+    </ul>
+   </nav>
+  </header>
+  <main>
+   <section class="hero gradient-bg">
+    <div class="floating-element">
+     💻
+    </div>
+    <div class="floating-element">
+     🚀
+    </div>
+    <div class="floating-element">
+     ⚡
+    </div>
+    <div class="hero-content animate-fadeInUp">
+     <h1 id="hero-title">Изучай IT с нами!</h1>
+     <p id="hero-subtitle">Современное IT-образование для детей от 6 до 16 лет</p><button class="cta-button animate-bounce" onclick="openModal()"> 📞 Записаться на уроки </button>
+    </div>
+   </section>
+   <section id="courses" class="section">
+    <h2 class="animate-fadeInUp">Наши IT-курсы</h2>
+    <div class="courses-grid">
+     <div class="course-card animate-slideInLeft">
+      <div class="course-icon">
+       🎮
+      </div>
+      <h3>Разработка игр</h3>
+      <p>Создавай собственные игры на Scratch, Unity и других платформах</p>
+      <ul class="course-features">
+       <li>Основы программирования</li>
+       <li>Создание персонажей</li>
+       <li>Игровая логика</li>
+       <li>Публикация игр</li>
+      </ul>
+     </div>
+     <div class="course-card animate-fadeInUp">
+      <div class="course-icon">
+       🌐
+      </div>
+      <h3>Веб-разработка</h3>
+      <p>Изучи HTML, CSS, JavaScript и создавай крутые сайты</p>
+      <ul class="course-features">
+       <li>HTML и CSS основы</li>
+       <li>JavaScript программирование</li>
+       <li>Адаптивный дизайн</li>
+       <li>Размещение в интернете</li>
+      </ul>
+     </div>
+     <div class="course-card animate-slideInRight">
+      <div class="course-icon">
+       🤖
+      </div>
+      <h3>Робототехника</h3>
+      <p>Собирай и программируй роботов с Arduino и Raspberry Pi</p>
+      <ul class="course-features">
+       <li>Сборка роботов</li>
+       <li>Программирование микроконтроллеров</li>
+       <li>Датчики и моторы</li>
+       <li>Соревнования роботов</li>
+      </ul>
+     </div>
+     <div class="course-card animate-slideInLeft">
+      <div class="course-icon">
+       📱
+      </div>
+      <h3>Мобильные приложения</h3>
+      <p>Создавай приложения для Android и iOS</p>
+      <ul class="course-features">
+       <li>App Inventor</li>
+       <li>Flutter разработка</li>
+       <li>Дизайн интерфейсов</li>
+       <li>Публикация в магазинах</li>
+      </ul>
+     </div>
+     <div class="course-card animate-fadeInUp">
+      <div class="course-icon">
+       🎨
+      </div>
+      <h3>3D моделирование</h3>
+      <p>Создавай 3D модели и анимации в Blender</p>
+      <ul class="course-features">
+       <li>Основы 3D моделирования</li>
+       <li>Текстурирование</li>
+       <li>Анимация объектов</li>
+       <li>Рендеринг</li>
+      </ul>
+     </div>
+     <div class="course-card animate-slideInRight">
+      <div class="course-icon">
+       🧠
+      </div>
+      <h3>Искусственный интеллект</h3>
+      <p>Изучи основы ИИ и машинного обучения</p>
+      <ul class="course-features">
+       <li>Основы ИИ</li>
+       <li>Python для ИИ</li>
+       <li>Нейронные сети</li>
+       <li>Компьютерное зрение</li>
+      </ul>
+     </div>
+    </div>
+   </section>
+   <section id="advantages" class="section">
+    <div class="advantages animate-fadeInUp">
+     <h2>Почему выбирают OkurmenKids?</h2>
+     <div class="advantages-grid">
+      <div class="advantage-item animate-slideInLeft"><span class="advantage-icon">👨‍🏫</span>
+       <h4>Опытные преподаватели</h4>
+       <p>Практикующие IT-специалисты с педагогическим опытом</p>
+      </div>
+      <div class="advantage-item animate-fadeInUp"><span class="advantage-icon">🎯</span>
+       <h4>Индивидуальный подход</h4>
+       <p>Программа адаптируется под уровень и интересы каждого ребенка</p>
+      </div>
+      <div class="advantage-item animate-slideInRight"><span class="advantage-icon">💻</span>
+       <h4>Современное оборудование</h4>
+       <p>Новейшие компьютеры и технологии для обучения</p>
+      </div>
+      <div class="advantage-item animate-slideInLeft"><span class="advantage-icon">🏆</span>
+       <h4>Сертификаты</h4>
+       <p>Официальные сертификаты по окончании курсов</p>
+      </div>
+      <div class="advantage-item animate-fadeInUp"><span class="advantage-icon">👥</span>
+       <h4>Малые группы</h4>
+       <p>До 8 человек в группе для максимального внимания</p>
+      </div>
+      <div class="advantage-item animate-slideInRight"><span class="advantage-icon">🎮</span>
+       <h4>Игровой подход</h4>
+       <p>Обучение через игры и интересные проекты</p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="stats animate-pulse">
+    <h2>Наши достижения</h2>
+    <div class="stats-grid">
+     <div class="stat-item">
+      <h3>500+</h3>
+      <p>Выпускников</p>
+     </div>
+     <div class="stat-item">
+      <h3>50+</h3>
+      <p>Проектов создано</p>
+     </div>
+     <div class="stat-item">
+      <h3>5</h3>
+      <p>Лет опыта</p>
+     </div>
+     <div class="stat-item">
+      <h3>98%</h3>
+      <p>Довольных родителей</p>
+     </div>
+    </div>
+   </div>
+   <section id="program" class="section">
+    <div class="curriculum">
+     <h2 class="animate-fadeInUp">Программа обучения</h2>
+     <div class="curriculum-timeline">
+      <div class="timeline-item animate-slideInLeft">
+       <div class="timeline-number">
+        1
+       </div>
+       <div class="timeline-content">
+        <h4>Знакомство с IT</h4>
+        <p>Основы компьютерной грамотности, понимание того, как работают компьютеры и интернет. Безопасность в сети.</p>
+       </div>
+      </div>
+      <div class="timeline-item animate-slideInRight">
+       <div class="timeline-number">
+        2
+       </div>
+       <div class="timeline-content">
+        <h4>Логическое мышление</h4>
+        <p>Развитие алгоритмического мышления через игры и головоломки. Основы логики и решения задач.</p>
+       </div>
+      </div>
+      <div class="timeline-item animate-slideInLeft">
+       <div class="timeline-number">
+        3
+       </div>
+       <div class="timeline-content">
+        <h4>Первые программы</h4>
+        <p>Изучение визуального программирования на Scratch. Создание первых игр и анимаций.</p>
+       </div>
+      </div>
+      <div class="timeline-item animate-slideInRight">
+       <div class="timeline-number">
+        4
+       </div>
+       <div class="timeline-content">
+        <h4>Специализация</h4>
+        <p>Выбор направления: веб-разработка, мобильные приложения, игры или робототехника.</p>
+       </div>
+      </div>
+      <div class="timeline-item animate-slideInLeft">
+       <div class="timeline-number">
+        5
+       </div>
+       <div class="timeline-content">
+        <h4>Проектная работа</h4>
+        <p>Создание собственного IT-проекта под руководством ментора. Презентация результатов.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="contact" class="section">
+    <div class="contact">
+     <h2>Запишись на бесплатный пробный урок!</h2>
+     <p>Позвони нам или напиши, и мы подберем идеальный курс для твоего ребенка</p>
+     <div class="contact-info">
+      <div class="contact-item">
+       <h4>📞 Телефон</h4>
+       <p id="phone-display">+996509279044</p>
+      </div>
+      <div class="contact-item">
+       <h4>📧 Email</h4>
+       <p id="email-display">info@okurmenkids.kg</p>
+      </div>
+     </div><button class="cta-button animate-pulse" onclick="openModal()" style="margin-top: 2rem;"> 🚀 Начать обучение </button>
+    </div>
+   </section>
+  </main><!-- Футер с контактами -->
+  <footer style="background: linear-gradient(135deg, #1f2937 0%, #374151 100%); color: white; padding: 3rem 2rem 2rem; text-align: center;">
+   <div style="max-width: 1200px; margin: 0 auto;">
+    <h3 style="font-size: 1.8rem; margin-bottom: 2rem; color: white;">📞 Свяжитесь с нами</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+     <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 15px; backdrop-filter: blur(10px);">
+      <h4 style="margin-bottom: 1rem; font-size: 1.2rem;">📱 Основной номер</h4><a href="tel:+996509279044" style="color: #60a5fa; text-decoration: none; font-size: 1.3rem; font-weight: bold;" id="footer-phone-main">+996509279044</a>
+     </div>
+     <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 15px; backdrop-filter: blur(10px);">
+      <h4 style="margin-bottom: 1rem; font-size: 1.2rem;">📞 Дополнительный</h4><a href="tel:+996700123456" style="color: #60a5fa; text-decoration: none; font-size: 1.3rem; font-weight: bold;">+996700123456</a>
+     </div>
+     <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 15px; backdrop-filter: blur(10px);">
+      <h4 style="margin-bottom: 1rem; font-size: 1.2rem;">📧 Email</h4><a href="mailto:info@okurmenkids.kg" style="color: #60a5fa; text-decoration: none; font-size: 1.1rem;" id="footer-email">info@okurmenkids.kg</a>
+     </div>
+    </div>
+    <div style="margin: 2rem 0;">
+     <p style="margin-bottom: 1.5rem; font-size: 1.1rem; opacity: 0.9;">📧 Место написать на email • 📸 Напишите туда напишите на Instagram</p><a href="https://instagram.com/okurmenkids" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #e1306c, #fd1d1d, #fcb045); 
+                          color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; 
+                          font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 5px 20px rgba(225, 48, 108, 0.3);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 25px rgba(225, 48, 108, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 20px rgba(225, 48, 108, 0.3)'"> <span style="font-size: 1.3rem;">📸</span> Напишите нам в Instagram </a>
+    </div>
+    <div style="border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 2rem; margin-top: 2rem;">
+     <p style="margin: 0.5rem 0; opacity: 0.8;">🕒 Работаем: Пн-Вс 08:30-21:00</p>
+     <p style="margin: 0.5rem 0; opacity: 0.8;">📍 Бишкек, ул. Тыбышалиева 29</p>
+     <p style="margin-top: 1.5rem; opacity: 0.6; font-size: 0.9rem;">© 2024 OkurmenKids. Все права защищены.</p>
+    </div>
+   </div>
+  </footer><!-- Модальное окно -->
+  <div id="contactModal" class="modal">
+   <div class="modal-content"><span class="close" onclick="closeModal()">×</span>
+    <h3>📞 Свяжитесь с нами</h3>
+    <div class="contact-details">
+     <p><strong>Позвоните нам прямо сейчас:</strong></p>
+     <div class="phone-number" id="modal-phone">
+      +996509279044
+     </div>
+     <p>или напишите на email:</p>
+     <p><strong id="modal-email">info@okurmenkids.kg</strong></p>
+     <p>🕒 Работаем: Пн-Вс 08:30-21:00</p>
+     <p>📍 Бишкек, ул. Тыбышалиева 29</p>
+    </div>
+   </div>
+  </div>
+  <script>
+        // Конфигурация по умолчанию
+        const defaultConfig = {
+            site_title: "OkurmenKids",
+            hero_title: "Изучай IT с нами!",
+            hero_subtitle: "Современное IT-образование для детей от 6 до 16 лет",
+            phone_number: "+996509279044",
+            email_contact: "info@okurmenkids.kg"
+        };
+
+        // Функция рендеринга
+        async function render(config) {
+            const siteTitle = config.site_title || defaultConfig.site_title;
+            const heroTitle = config.hero_title || defaultConfig.hero_title;
+            const heroSubtitle = config.hero_subtitle || defaultConfig.hero_subtitle;
+            const phoneNumber = config.phone_number || defaultConfig.phone_number;
+            const emailContact = config.email_contact || defaultConfig.email_contact;
+
+            // Обновляем элементы
+            document.getElementById('site-title').textContent = siteTitle;
+            document.getElementById('hero-title').textContent = heroTitle;
+            document.getElementById('hero-subtitle').textContent = heroSubtitle;
+            document.getElementById('phone-display').textContent = phoneNumber;
+            document.getElementById('email-display').textContent = emailContact;
+            document.getElementById('modal-phone').textContent = phoneNumber;
+            document.getElementById('modal-email').textContent = emailContact;
+            
+            // Обновляем футер
+            const footerPhoneMain = document.getElementById('footer-phone-main');
+            const footerEmail = document.getElementById('footer-email');
+            if (footerPhoneMain) {
+                footerPhoneMain.textContent = phoneNumber;
+                footerPhoneMain.href = `tel:${phoneNumber}`;
+            }
+            if (footerEmail) {
+                footerEmail.textContent = emailContact;
+                footerEmail.href = `mailto:${emailContact}`;
+            }
+        }
+
+        // Функции для модального окна
+        function openModal() {
+            document.getElementById('contactModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('contactModal').style.display = 'none';
+        }
+
+        // Закрытие модального окна при клике вне его
+        window.onclick = function(event) {
+            const modal = document.getElementById('contactModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Плавная прокрутка для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Анимация при прокрутке
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Наблюдаем за элементами для анимации
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.animate-fadeInUp, .animate-slideInLeft, .animate-slideInRight');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.8s ease-out';
+                observer.observe(el);
+            });
+        });
+
+        // Инициализация Element SDK
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig: defaultConfig,
+                render: render,
+                mapToCapabilities: (config) => ({
+                    recolorables: [],
+                    borderables: [],
+                    fontEditable: undefined,
+                    fontSizeable: undefined
+                }),
+                mapToEditPanelValues: (config) => new Map([
+                    ["site_title", config.site_title || defaultConfig.site_title],
+                    ["hero_title", config.hero_title || defaultConfig.hero_title],
+                    ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+                    ["phone_number", config.phone_number || defaultConfig.phone_number],
+                    ["email_contact", config.email_contact || defaultConfig.email_contact]
+                ])
+            });
+        }
+    </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'991968590342b659',t:'MTc2MDk3MjY2NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
